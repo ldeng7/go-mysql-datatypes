@@ -55,6 +55,7 @@ func (p *Polygon) decodeFrom(data *bytes.Reader, decodeSrid bool) error {
 	}
 	return p.Data.decodeFrom(data)
 }
+
 func (p *Polygon) encodeTo(data *bytes.Buffer, encodeSrid bool) {
 	p.encodeHeaderTo(data, encodeSrid, GEOMETRY_TYPE_POLYGON)
 	p.Data.encodeTo(data)
